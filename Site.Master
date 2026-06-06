@@ -1,0 +1,160 @@
+﻿<%@ Master Language="C#"
+    AutoEventWireup="true"
+    CodeBehind="Site.Master.cs"
+    Inherits="Emerald.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head runat="server">
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1" />
+
+    <title>Emerald Fairways Golf Club</title>
+
+    <link href="CSS/styles.css"
+          rel="stylesheet" />
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+          rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <form id="form1"
+          runat="server">
+
+        <!-- LOADER -->
+
+        <div id="loader">
+
+            <div class="loader-text">
+                Emerald Fairways
+            </div>
+
+        </div>
+
+        <!-- COOKIE BANNER -->
+
+        <div id="cookieBanner"
+             class="cookie-banner">
+
+            <span>
+                This website uses cookies.
+            </span>
+
+            <button id="acceptCookies"
+                    type="button">
+
+                Accept
+
+            </button>
+
+        </div>
+
+        <!-- SITE WRAPPER -->
+
+        <div class="site-wrapper">
+
+            <!-- NAVBAR -->
+
+            <header class="navbar">
+
+                <div class="nav-container">
+
+                    <div class="logo">
+                        Emerald Fairways
+                    </div>
+
+                    <ul class="nav-links">
+
+                        <li>
+                            <a href="IndexWebForm.aspx">
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="Membership.aspx">
+                                Membership
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="Events.aspx">
+                                Events
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="Contact.aspx">
+                                Contact
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="AdminDashboard.aspx">
+                                Admin
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </header>
+
+            <!-- PAGE CONTENT -->
+
+            <main class="page-content">
+
+                <asp:ContentPlaceHolder
+                    ID="MainContent"
+                    runat="server">
+                </asp:ContentPlaceHolder>
+
+            </main>
+
+            <!-- FOOTER -->
+
+            <footer class="footer">
+
+                <div class="container">
+
+                    <h3>
+                        Emerald Fairways Golf Club
+                    </h3>
+
+                    <p>
+                        Luxury • Tradition • Excellence
+                    </p>
+
+                    <p>
+                        © 2026 Emerald Fairways Golf Club
+                    </p>
+
+                </div>
+
+            </footer>
+
+        </div>
+
+    </form>
+
+    <script src="JS/script.js"></script>
+
+</body>
+
+</html>
