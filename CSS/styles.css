@@ -1164,3 +1164,32 @@ form {
     .footer p {
         margin: 4px 0;
     }
+
+.approve-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 8px;
+    font-weight: 600;
+}
+
+.reject-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.approve-btn:hover {
+    background: #1e7e34;
+}
+
+.reject-btn:hover {
+    background: #b02a37;
+}

@@ -25,45 +25,49 @@ runat="server">
 
     <div class="admin-table-wrapper">
 
-        <asp:GridView
-            ID="gvMembers"
-            runat="server"
-            AutoGenerateColumns="False"
-            CssClass="luxury-grid">
+ <asp:GridView
+    ID="gvMembers"
+    runat="server"
+    AutoGenerateColumns="False"
+    CssClass="luxury-grid"
+    DataKeyNames="ApplicationID"
+    OnRowCommand="gvMembers_RowCommand">
 
-            <Columns>
+    <Columns>
 
-                <asp:BoundField
-                    DataField="ApplicationID"
-                    HeaderText="ID" />
+        <asp:BoundField DataField="ApplicationID" HeaderText="ID" />
+        <asp:BoundField DataField="FullName" HeaderText="Full Name" />
+        <asp:BoundField DataField="EmailAddress" HeaderText="Email" />
+        <asp:BoundField DataField="PhoneNumber" HeaderText="Phone" />
+        <asp:BoundField DataField="MembershipType" HeaderText="Membership" />
+        <asp:BoundField DataField="Status" HeaderText="Status" />
+        <asp:BoundField DataField="ApplicationDate" HeaderText="Applied On" />
 
-                <asp:BoundField
-                    DataField="FullName"
-                    HeaderText="Full Name" />
+        <asp:TemplateField HeaderText="Actions">
+            <ItemTemplate>
 
-                <asp:BoundField
-                    DataField="EmailAddress"
-                    HeaderText="Email" />
+                <asp:Button
+                    ID="btnApprove"
+                    runat="server"
+                    Text="Approve"
+                    CommandName="Approve"
+                    CommandArgument='<%# Eval("ApplicationID") %>'
+                    CssClass="approve-btn" />
 
-                <asp:BoundField
-                    DataField="PhoneNumber"
-                    HeaderText="Phone" />
+                <asp:Button
+                    ID="btnReject"
+                    runat="server"
+                    Text="Reject"
+                    CommandName="Reject"
+                    CommandArgument='<%# Eval("ApplicationID") %>'
+                    CssClass="reject-btn" />
 
-                <asp:BoundField
-                    DataField="MembershipType"
-                    HeaderText="Membership" />
+            </ItemTemplate>
+        </asp:TemplateField>
 
-                <asp:BoundField
-                    DataField="Status"
-                    HeaderText="Status" />
+    </Columns>
 
-                <asp:BoundField
-                    DataField="ApplicationDate"
-                    HeaderText="Applied On" />
-
-            </Columns>
-
-        </asp:GridView>
+</asp:GridView>
 
     </div>
 
